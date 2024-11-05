@@ -13,6 +13,7 @@ public class KafkaConfig {
 
     @Bean
     public NewTopic topic(){
+        //initialize "location" topic
         return TopicBuilder
                 .name(CAB_LOCATION)
                 .build();

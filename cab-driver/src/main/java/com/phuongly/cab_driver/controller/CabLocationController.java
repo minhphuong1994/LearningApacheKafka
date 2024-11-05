@@ -18,10 +18,11 @@ public class CabLocationController {
     private CabLocationService cabLocationService;
 
     @PutMapping
-    public ResponseEntity updateSender(){
+    public ResponseEntity updateSender() throws InterruptedException {
         int range = 0;
         while(range < 10){
-
+            cabLocationService.updateLocation(Math.random()+" , "+Math.random());
+            Thread.sleep(500);
             range++;
         }
 
